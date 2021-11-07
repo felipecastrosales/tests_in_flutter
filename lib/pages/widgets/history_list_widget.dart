@@ -44,10 +44,14 @@ class HistoryListWidget extends StatelessWidget {
                     itemBuilder: (_, index) {
                       return HistoryItemWidget(
                         history: user.history[index],
+                        index: index,
                       );
                     },
                   )
-                : const Text('Nenhuma operação recente.'),
+                : const Text(
+                    'Nenhuma operação recente.',
+                    key: Key('HistoryEmpty'),
+                  ),
           ),
         ],
       ),

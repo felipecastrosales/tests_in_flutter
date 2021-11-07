@@ -73,6 +73,7 @@ class _OperationPageState extends State<OperationPage> {
                   alignment: Alignment.centerLeft,
                   child: Icon(
                     Icons.close,
+                    key: const Key('CloseOperation'),
                     color: Colors.grey[500],
                   ),
                 ),

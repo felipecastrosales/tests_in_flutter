@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_driver/driver_extension.dart';
+
 import 'pages/home_page.dart';
 
-void main() {
+void main() {  
+  enableFlutterDriverExtension();
   runApp(const MyApp());
 }
 
