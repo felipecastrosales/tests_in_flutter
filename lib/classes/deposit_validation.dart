@@ -1,6 +1,6 @@
-import 'package:unitary_tests/models/history.dart';
-import 'package:unitary_tests/models/operation.dart';
-import 'package:unitary_tests/models/operation_result.dart';
+import 'package:tests_in_flutter/models/history.dart';
+import 'package:tests_in_flutter/models/operation.dart';
+import 'package:tests_in_flutter/models/operation_result.dart';
 import '../error/failure.dart';
 
 // Validate the deposit operation

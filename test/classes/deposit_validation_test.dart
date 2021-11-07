@@ -1,8 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:unitary_tests/classes/deposit_validation.dart';
-import 'package:unitary_tests/error/failure.dart';
-import 'package:unitary_tests/models/operation.dart';
-import 'package:unitary_tests/models/operation_result.dart';
+
+import 'package:tests_in_flutter/classes/deposit_validation.dart';
+import 'package:tests_in_flutter/error/failure.dart';
+import 'package:tests_in_flutter/models/operation.dart';
+import 'package:tests_in_flutter/models/operation_result.dart';
 
 void main() {
   test('Test validation with value zero', () {

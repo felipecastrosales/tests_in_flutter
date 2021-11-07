@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:unitary_tests/error/failure.dart';
+
+import 'package:tests_in_flutter/error/failure.dart';
 
 void main() {
   test('Test throw Exception Failure with message', () {

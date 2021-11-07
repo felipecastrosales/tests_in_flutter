@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:unitary_tests/pages/home_page.dart';
-import 'package:unitary_tests/pages/operation_page.dart';
+import 'package:tests_in_flutter/pages/home_page.dart';
+import 'package:tests_in_flutter/pages/operation_page.dart';
 
 void main() {
   testWidgets('Test initial state', (tester) async {

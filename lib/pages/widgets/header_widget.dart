@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
-import 'package:unitary_tests/models/user.dart';
+import 'package:tests_in_flutter/models/user.dart';
 
 class HeaderWidget extends StatelessWidget {
   HeaderWidget({
