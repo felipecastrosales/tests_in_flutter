@@ -29,9 +29,7 @@ class _HomePageState extends State<HomePage> {
               onDeposit: () => _toOperationPage(OperationType.deposit),
               onWithdraw: () => _toOperationPage(OperationType.withdraw),
             ),
-            HistoryListWidget(
-              user: _user
-            ),
+            HistoryListWidget(user: _user),
           ],
         ),
       ),
@@ -60,20 +58,28 @@ class _HomePageState extends State<HomePage> {
                 ),
               );
             },
-            // Displays an error dialog if validation fails to 
+            // Displays an error dialog if validation fails to
             // perform the operation
             onError: (error) {
               showDialog(
+                barrierDismissible: true,
                 context: context,
                 builder: (context) {
                   return AlertDialog(
                     title: const Text('Ops...'),
-                    content: Text(error.message),
+                    content: Text(
+                      error.message,
+                      key: const Key('ErrorMessage'),
+                    ),
                     actions: [
                       TextButton(
+                        key: const Key('OkButton'),
                         onPressed: () => Navigator.pop(context),
-                        child: const Text('Ok'),
-                      )
+                        child: const Text(
+                          'Ok',
+                          key: Key('TextButton'),
+                        ),
+                      ),
                     ],
                   );
                 },

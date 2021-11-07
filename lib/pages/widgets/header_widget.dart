@@ -69,6 +69,7 @@ class HeaderWidget extends StatelessWidget {
           child: Row(
             children: [
               GestureDetector(
+                key: const Key('DepositButton'),
                 onTap: onDeposit,
                 child: Chip(
                   backgroundColor: Colors.grey[200],
@@ -96,6 +97,7 @@ class HeaderWidget extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               GestureDetector(
+                key: const Key('WithdrawButton'),
                 onTap: onWithdraw,
                 child: Chip(
                   backgroundColor: Colors.grey[200],
