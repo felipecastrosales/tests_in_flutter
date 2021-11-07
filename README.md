@@ -23,8 +23,9 @@
 <h2>📖 Sobre</h2>
 
 <p>
-    Esse foi o projeto desenvolvido na aula de Testes com Flutter no <a href="https://www.rocketseat.com.br/expertsclub">Experts Club</a>, um clube de aprendizado contínuo para devs.<br>
+    Esse foi o projeto desenvolvido nas aula de Testes com Flutter no <a href="https://www.rocketseat.com.br/expertsclub">Experts Club</a>, um clube de aprendizado contínuo para devs.<br>
     Nesse projeto, foi ensinado a respeito de testes em uma aplicação real sem testes, e foi feita a implementação dos mesmos nesse projeto. Além de ser falado em testes de forma geral, também foi abordado técnicas mais específicas e práticas para serem usadas, como os testes unitários e os testes de Widgets.<br>
+    Na segunda aula, foi implementado os testes de integração, onde usamos o flutter_driver para realizar esses testes. Foi de muito valor.<br>
 </p>
 
 ---
@@ -40,8 +41,8 @@
 <h2>🤯 Desafios e Aprendizados ao longo do caminho</h2>
 
    <p>
-   Essa foi uma experiência super bacana de trabalhar com testes, pois eles são uma parte muito importante de qualquer aplicação profissional e confiável.<br>
-   Eu aprendi bastante sobre testes e consegui entender bem como eles funcionam no Flutter, e também que trabalhar com os mesmos era mais fácil do que eu imaginava. 
+   Foi uma experiência super bacana de implementar testes em uma aplicação prática real, pois eles são uma parte muito importante de qualquer aplicação profissional e confiável.<br>
+   Eu aprendi bastante sobre testes e consegui entender bem como eles funcionam no Flutter, e também que trabalhar com os mesmos era mais fácil do que eu imaginava. A implementação deles vai ser de enorme ajuda para mim nas próximas aplicações que criarei.<br>
    Além disso, não aprendi só sobre testes, mas reforcei alguns aprendizados com o template de aplicação que o Renato Mota disponibilizou, e também sobre sua didática ao dar a aula. Foi extraordinário, assim como todas as outras aulas do Experts Club.<br>
    </p>
 
@@ -54,10 +55,10 @@
    https://flutter.dev/docs/get-started/install
 
    - Clone o repositório:
-   $ git clone https://github.com/felipecastrosales/unitary-tests unitary-tests
+   $ git clone https://github.com/felipecastrosales/tests_in_flutter tests_in_flutter
 
    - Entre no diretório:
-   $ cd unitary-tests
+   $ cd tests_in_flutter
 
    - Instale as dependências:
    $ flutter pub get

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:extended_masked_text/extended_masked_text.dart';
 
-import 'package:unitary_tests/error/failure.dart';
-import 'package:unitary_tests/models/operation.dart';
-import 'package:unitary_tests/models/user.dart';
+import 'package:tests_in_flutter/error/failure.dart';
+import 'package:tests_in_flutter/models/operation.dart';
+import 'package:tests_in_flutter/models/user.dart';
 
 class OperationPage extends StatefulWidget {
   const OperationPage({

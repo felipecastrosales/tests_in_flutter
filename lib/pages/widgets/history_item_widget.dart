@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
-import 'package:unitary_tests/models/history.dart';
-import 'package:unitary_tests/models/operation.dart';
+import 'package:tests_in_flutter/models/history.dart';
+import 'package:tests_in_flutter/models/operation.dart';
 
 class HistoryItemWidget extends StatelessWidget {
   HistoryItemWidget({

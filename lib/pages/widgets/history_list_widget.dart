@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:unitary_tests/models/user.dart';
+import 'package:tests_in_flutter/models/user.dart';
 import 'history_item_widget.dart';
 
 class HistoryListWidget extends StatelessWidget {

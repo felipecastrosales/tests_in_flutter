@@ -1,6 +1,6 @@
 {
-    "name": "unitary_tests",
-    "short_name": "unitary_tests",
+    "name": "tests_in_flutter",
+    "short_name": "tests_in_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

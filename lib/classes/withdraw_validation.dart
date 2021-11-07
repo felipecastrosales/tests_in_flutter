@@ -1,5 +1,5 @@
-import 'package:unitary_tests/models/history.dart';
-import 'package:unitary_tests/models/operation.dart';
+import 'package:tests_in_flutter/models/history.dart';
+import 'package:tests_in_flutter/models/operation.dart';
 import '../error/failure.dart';
 import '../models/operation_result.dart';
 

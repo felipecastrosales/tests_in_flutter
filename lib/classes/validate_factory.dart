@@ -1,5 +1,5 @@
-import 'package:unitary_tests/classes/withdraw_validation.dart';
-import 'package:unitary_tests/models/operation.dart';
+import 'package:tests_in_flutter/classes/withdraw_validation.dart';
+import 'package:tests_in_flutter/models/operation.dart';
 import 'deposit_validation.dart';
 import '../models/operation_result.dart';
 

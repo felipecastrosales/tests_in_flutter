@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:unitary_tests/models/operation.dart';
-import 'package:unitary_tests/models/user.dart';
+import 'package:tests_in_flutter/models/operation.dart';
+import 'package:tests_in_flutter/models/user.dart';
 import 'operation_page.dart';
 import 'widgets/header_widget.dart';
 import 'widgets/history_list_widget.dart';
