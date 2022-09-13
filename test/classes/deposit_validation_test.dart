@@ -37,8 +37,17 @@ void main() {
       balance: 0.0,
       value: 100.0,
     );
-    expect(response.result, 100);
-    expect(response.history.type, OperationType.deposit);
-    expect(response.message, 'Depósito realizado com sucesso');
+    expect(
+      response.result,
+      100.0,
+    );
+    expect(
+      response.history.type,
+      OperationType.deposit,
+    );
+    expect(
+      response.message,
+      'Depósito realizado com sucesso',
+    );
   });
 }

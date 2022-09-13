@@ -50,8 +50,17 @@ void main() {
       balance: 150.0,
       value: 100.0,
     );
-    expect(response.result, 50.0);
-    expect(response.history.type, OperationType.withdraw);
-    expect(response.message, 'Saque realizado com sucesso');
+    expect(
+      response.result,
+      50.0,
+    );
+    expect(
+      response.history.type,
+      OperationType.withdraw,
+    );
+    expect(
+      response.message,
+      'Saque realizado com sucesso',
+    );
   });
 }

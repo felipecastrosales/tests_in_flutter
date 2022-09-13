@@ -7,7 +7,6 @@ void main() {
     void function() {
       throw Failure(message: 'Falha executada');
     }
-
     expect(
       function,
       throwsA(
@@ -20,7 +19,6 @@ void main() {
     void function() {
       throw Failure();
     }
-
     expect(
       function,
       throwsA(
@@ -31,10 +29,13 @@ void main() {
 
   test('Test Failure message', () {
     final failure = Failure(message: 'Falha Executada');
-    expect(failure.message, 'Falha Executada');
+    expect(
+      failure.message,
+      'Falha Executada',
+    );
   });
 
-    test('Test Failure without message', () {
+  test('Test Failure without message', () {
     final failure = Failure();
     expect(failure.message, '');
   });
