@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/intl.dart';
 
 void main() {
-  final DateFormat _dateFormatter = DateFormat('d/M/y');
+  final DateFormat dateFormatter = DateFormat('d/M/y');
   group('Should test the deposit operation', () {
     late dr.FlutterDriver driver;
 
@@ -56,7 +56,7 @@ void main() {
 
       expect(await driver.getText(historySubtitle), 'R\$ 50,00');
 
-      final date = _dateFormatter.format(
+      final date = dateFormatter.format(
         DateTime.now(),
       );
 
@@ -161,7 +161,7 @@ void main() {
 
       expect(await driver.getText(historySubtitle), 'R\$ 10,00');
 
-      final date = _dateFormatter.format(
+      final date = dateFormatter.format(
         DateTime.now(),
       );
 

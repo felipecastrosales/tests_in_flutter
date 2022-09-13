@@ -1,9 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:tests_in_flutter/classes/withdraw_validation.dart';
+import 'package:tests_in_flutter/classes/classes.dart';
 import 'package:tests_in_flutter/error/failure.dart';
-import 'package:tests_in_flutter/models/operation.dart';
-import 'package:tests_in_flutter/models/operation_result.dart';
+import 'package:tests_in_flutter/models/models.dart';
 
 void main() {
   test('Test validation with value zero', () {

@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
-import 'package:tests_in_flutter/models/user.dart';
+import 'package:tests_in_flutter/models/models.dart';
 
 class HeaderWidget extends StatelessWidget {
   HeaderWidget({
-    Key? key,
+    super.key,
     required this.user,
     required this.onDeposit,
     required this.onWithdraw,
-  }) : super(key: key);
+  });
 
   final NumberFormat _formatter = NumberFormat.currency(
     locale: 'pt_br',
     symbol: 'R\$',
   );
 
+  final User user;
   final Function() onDeposit;
   final Function() onWithdraw;
 
-  final User user;
   @override
   Widget build(BuildContext context) {
     final value = _formatter.format(user.balance);
@@ -47,7 +47,7 @@ class HeaderWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
+            padding: const EdgeInsets.only(top: 8),
             child: Text(
               value,
               key: const Key('BalanceKey'),

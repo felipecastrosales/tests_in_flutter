@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:tests_in_flutter/classes/validate_factory.dart';
-import 'package:tests_in_flutter/models/operation.dart';
+import 'package:tests_in_flutter/classes/classes.dart';
+import 'package:tests_in_flutter/models/models.dart';
 
 void main() {
   test('Validate when type is Deposity', () {

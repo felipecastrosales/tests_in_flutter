@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
-import 'package:tests_in_flutter/models/operation.dart';
-import 'package:tests_in_flutter/models/user.dart';
-import 'operation_page.dart';
-import 'widgets/header_widget.dart';
-import 'widgets/history_list_widget.dart';
+import 'package:tests_in_flutter/models/models.dart';
+
+import 'pages.dart';
+import 'widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  User _user = User(balance: 0, history: []);
+  User _user = User(
+    balance: 0,
+    history: [],
+  );
 
   @override
   Widget build(BuildContext context) {

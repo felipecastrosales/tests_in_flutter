@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:extended_masked_text/extended_masked_text.dart';
 
 import 'package:tests_in_flutter/error/failure.dart';
-import 'package:tests_in_flutter/models/operation.dart';
-import 'package:tests_in_flutter/models/user.dart';
+import 'package:tests_in_flutter/models/models.dart';
 
 class OperationPage extends StatefulWidget {
   const OperationPage({
-    Key? key,
+    super.key,
     required this.user,
     required this.operationType,
     required this.onError,
     required this.onSuccess,
-  }) : super(key: key);
+  });
 
   final User user;
   final OperationType operationType;
@@ -21,15 +20,22 @@ class OperationPage extends StatefulWidget {
   final Function(String) onSuccess;
 
   @override
-  _OperationPageState createState() => _OperationPageState();
+  State<OperationPage> createState() => _OperationPageState();
 }
 
 class _OperationPageState extends State<OperationPage> {
-  final controller =
-      MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0.0);
+  final controller = MoneyMaskedTextController(
+    leftSymbol: 'R\$ ',
+    initialValue: 0.0,
+  );
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = Theme.of(context).textTheme.headline5?.copyWith(
+          fontWeight: FontWeight.w600,
+          fontSize: 32,
+        );
+
     return Scaffold(
       backgroundColor: Colors.transparent,
       floatingActionButton: FloatingActionButton(
@@ -40,9 +46,10 @@ class _OperationPageState extends State<OperationPage> {
           try {
             // Create the operation object
             final Operation operation = Operation(
-                balance: widget.user.balance,
-                value: controller.numberValue,
-                type: widget.operationType);
+              balance: widget.user.balance,
+              value: controller.numberValue,
+              type: widget.operationType,
+            );
             // Do the operation
             final response = operation.doOperation();
             widget.onSuccess(response.message);
@@ -99,21 +106,15 @@ class _OperationPageState extends State<OperationPage> {
               children: [
                 TextField(
                   key: const Key('OperationValueKey'),
+                  controller: controller,
                   autofocus: true,
+                  keyboardType: TextInputType.number,
+                  style: textStyle,
                   decoration: InputDecoration(
                     border: InputBorder.none,
+                    hintStyle: textStyle,
                     hintText: 'R\$ 0,00',
-                    hintStyle: Theme.of(context).textTheme.headline5!.copyWith(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 32,
-                        ),
                   ),
-                  keyboardType: TextInputType.number,
-                  controller: controller,
-                  style: Theme.of(context).textTheme.headline5!.copyWith(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 32,
-                      ),
                 ),
                 Text(
                   'Digite um valor maior que R\$ 0,01',

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:tests_in_flutter/models/user.dart';
-import 'history_item_widget.dart';
+import 'package:tests_in_flutter/models/models.dart';
+import 'widgets.dart';
 
 class HistoryListWidget extends StatelessWidget {
   const HistoryListWidget({
-    Key? key,
+    super.key,
     required this.user,
-  }) : super(key: key);
+  });
 
   final User user;
 

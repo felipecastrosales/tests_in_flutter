@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
-import 'package:tests_in_flutter/models/history.dart';
-import 'package:tests_in_flutter/models/operation.dart';
+import 'package:tests_in_flutter/models/models.dart';
 
 class HistoryItemWidget extends StatelessWidget {
   HistoryItemWidget({
-    Key? key,
+    super.key,
     required this.history,
     required this.index,
-  }) : super(key: key);
+  });
 
   final History history;
   final int index;
@@ -44,10 +43,8 @@ class HistoryItemWidget extends StatelessWidget {
         ),
       ),
       subtitle: Text(
-        _formatter.format(
-          (history.value)
-        ),
         key: Key('HistorySubtitle${index.toString()}'),
+        _formatter.format((history.value)),
       ),
       leading: Container(
         height: 32,
