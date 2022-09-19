@@ -5,12 +5,10 @@ import 'package:tests_in_flutter/pages/pages.dart';
 
 void main() {
   testWidgets('Test initial state', (tester) async {
-    await tester.pumpWidget(
-      const MaterialApp(
-        home: HomePage(),
-      ),
+    await _createWidget(
+      tester: tester,
+      widget: const HomePage(),
     );
-    await tester.pump();
 
     expect(find.text('Saldo disponível'), findsOneWidget);
     expect(
@@ -26,12 +24,10 @@ void main() {
 
   testWidgets('Test deposit action', (tester) async {
     // render widget
-    await tester.pumpWidget(
-      const MaterialApp(
-        home: HomePage(),
-      ),
+    await _createWidget(
+      tester: tester,
+      widget: const HomePage(),
     );
-    await tester.pump();
 
     // found the deposit button
     final depositButton = find.text('Depositar');
@@ -58,4 +54,17 @@ void main() {
     // success confirm with snackBar
     expect(find.text('Depósito realizado com sucesso'), findsOneWidget);
   });
+}
+
+// widget renderized in test with pump
+Future<void> _createWidget({
+  required WidgetTester tester,
+  required Widget widget,
+}) async {
+  await tester.pumpWidget(
+    MaterialApp(
+      home: widget,
+    ),
+  );
+  await tester.pump();
 }
