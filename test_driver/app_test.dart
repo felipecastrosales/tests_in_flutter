@@ -92,8 +92,10 @@ void main() {
 
       final errorMessage = dr.find.byValueKey('ErrorMessage');
 
-      expect(await driver.getText(errorMessage),
-          'Não é posssível depositar esse valor.');
+      expect(
+        await driver.getText(errorMessage),
+        'Não é posssível depositar esse valor.',
+      );
 
       final okButton = dr.find.byValueKey('OkButton');
 
@@ -147,6 +149,7 @@ void main() {
       final continueButton = dr.find.byValueKey('OperationContinue');
 
       await driver.tap(continueButton);
+
       await driver.waitFor(
         dr.find.byType('HomePage'),
       );
@@ -199,8 +202,10 @@ void main() {
 
       final errorMessage = dr.find.byValueKey('ErrorMessage');
 
-      expect(await driver.getText(errorMessage),
-          'Não é posssível sacar esse valor.',);
+      expect(
+        await driver.getText(errorMessage),
+        'Não é posssível sacar esse valor.',
+      );
 
       final okButton = dr.find.byValueKey('OkButton');
 
