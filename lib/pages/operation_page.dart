@@ -31,7 +31,7 @@ class _OperationPageState extends State<OperationPage> {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = Theme.of(context).textTheme.headline5?.copyWith(
+    final textStyle = Theme.of(context).textTheme.headlineSmall?.copyWith(
           fontWeight: FontWeight.w600,
           fontSize: 32,
         );
@@ -93,7 +93,7 @@ class _OperationPageState extends State<OperationPage> {
               children: [
                 Text(
                   'Qual o valor do ${widget.operationType == OperationType.deposit ? 'depósito' : 'saque'}?',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context).textTheme.titleLarge,
                 )
               ],
             ),
@@ -118,7 +118,7 @@ class _OperationPageState extends State<OperationPage> {
                 ),
                 Text(
                   'Digite um valor maior que R\$ 0,01',
-                  style: Theme.of(context).textTheme.caption,
+                  style: Theme.of(context).textTheme.bodySmall,
                 )
               ],
             ),
