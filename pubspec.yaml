@@ -4,19 +4,19 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.2 <3.0.0"
+  sdk: ">=3.4.0 <4.0.0"
 
 dependencies:
-  cupertino_icons: ^1.0.5
-  extended_masked_text: ^2.3.1
+  cupertino_icons: ^1.0.8
+  extended_masked_text: ^3.0.1
   flutter:
     sdk: flutter
-  flutter_lints: ^2.0.1
-  intl: ^0.18.0
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_driver:
     sdk: flutter
+  flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
 

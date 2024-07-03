@@ -5,17 +5,12 @@ import 'package:intl/intl.dart';
 import 'package:tests_in_flutter/models/models.dart';
 
 class HeaderWidget extends StatelessWidget {
-  HeaderWidget({
+  const HeaderWidget({
     super.key,
     required this.user,
     required this.onDeposit,
     required this.onWithdraw,
   });
-
-  final NumberFormat _formatter = NumberFormat.currency(
-    locale: 'pt_br',
-    symbol: 'R\$',
-  );
 
   final User user;
   final Function() onDeposit;
@@ -23,7 +18,8 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final value = _formatter.format(user.balance);
+    final formatter = NumberFormat.currency(locale: 'pt_br', symbol: 'R\$');
+    final value = formatter.format(user.balance);
 
     return Column(
       mainAxisSize: MainAxisSize.max,
@@ -73,10 +69,10 @@ class HeaderWidget extends StatelessWidget {
                 onTap: onDeposit,
                 child: Chip(
                   backgroundColor: Colors.grey[200],
-                  label: Padding(
-                    padding: const EdgeInsets.all(8),
+                  label: const Padding(
+                    padding: EdgeInsets.all(8),
                     child: Row(
-                      children: const [
+                      children: [
                         Icon(
                           Icons.add,
                           color: Colors.black,
@@ -101,10 +97,10 @@ class HeaderWidget extends StatelessWidget {
                 onTap: onWithdraw,
                 child: Chip(
                   backgroundColor: Colors.grey[200],
-                  label: Padding(
-                    padding: const EdgeInsets.all(8),
+                  label: const Padding(
+                    padding: EdgeInsets.all(8),
                     child: Row(
-                      children: const [
+                      children: [
                         Icon(
                           Icons.remove,
                           color: Colors.black,
